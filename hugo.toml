@@ -1,23 +1,47 @@
-baseURL = 'https://montagna-katokeyci.github.io/'
+baseURL = 'https://offtrailhiking.github.io/'
 languageCode = 'ja'
-title = 'Montagna 山行記録'
+title = '山とカンツォーネ'
 theme = 'PaperMod'
 
-[params]
-  ShowBreadCrumbs = true
-  ShowPostNavLinks = true
-  ShowCodeCopyButtons = true
+[author]
+  name = 'モンターニャ'
 
-[taxonomies]
-  category = 'categories'
-  tag = 'tags'
+[params]
+  [params.homeInfoParams]
+    Title = "山とカンツォーネ"
+    Content = "奥多摩のオフトレイル・ハイキングときどきカンツォーネ"
 
 [[menu.main]]
-  name = "カテゴリ一覧"
-  url = "/categories/"
+  name = "山行記録"
+  url = "/categories/sankouki/"
   weight = 10
 
 [[menu.main]]
-  name = "タグ一覧"
-  url = "/tags/"
+  name = "カンツォーネ"
+  url = "/categories/canzone/"
   weight = 20
+
+[[menu.main]]
+  name = "雑記"
+  url = "/categories/zakki/"
+  weight = 30
+
+[[menu.main]]
+  name = "タグ"
+  url = "/tags/"
+  weight = 40
+
+[[menu.main]]
+  name = "アーカイブ"
+  url = "/archives/"
+  weight = 50
+
+[[menu.main]]
+  name = "検索"
+  url = "/search/"
+  weight = 60
+
+[[menu.main]]
+  name = "プロフィール"
+  url = "/profile/"
+  weight = 70
