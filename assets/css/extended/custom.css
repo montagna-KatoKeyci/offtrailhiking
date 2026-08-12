@@ -1,20 +1,47 @@
-/* 左上のサイトタイトルを少し大きく */
+/* 1. 「山とカンツォーネ」の文字をもう少し大きく */
 .logo a {
-    font-size: 24px !important;
+    font-size: 32px !important;
     font-weight: bold;
+    line-height: 1.2;
 }
 
-/* ヘッダータイトルの下に紹介短文を表示 */
+/* 2. 紹介短文をタイトルの直下に縦並びで配置（レイアウト崩れ・重なり防止） */
+.nav {
+    flex-wrap: wrap;
+}
+
 .logo {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .logo::after {
-    content: "奥多摩オフトレイル・ハイキングときどきカンツォーネ";
+    content: "奥多摩のオフトレイル・ハイキングときどきカンツォーネ";
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--secondary);
     font-weight: normal;
-    margin-top: 4px;
+    margin-top: 6px;
+}
+
+/* 3. コンテンツ「ジャンダルム周回...」の文字サイズをふたつ分小さく */
+.entry-title {
+    font-size: 1.25rem !important;
+}
+
+/* 4. 記事の「カード」に枠線をつけて区切りを明確にする */
+.post-entry {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 20px;
+    background: var(--entry);
+    transition: transform 0.1s ease, border-color 0.1s ease;
+}
+
+.post-entry:hover {
+    border-color: var(--primary);
 }
