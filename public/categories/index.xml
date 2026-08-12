@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Montagna 山行記録</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Montagna 山行記録</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 12 Aug 2026 20:42:35 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一般登山</title>
+      <link>http://localhost:1313/categories/%E4%B8%80%E8%88%AC%E7%99%BB%E5%B1%B1/</link>
+      <pubDate>Wed, 12 Aug 2026 20:42:35 +0900</pubDate>
+      <guid>http://localhost:1313/categories/%E4%B8%80%E8%88%AC%E7%99%BB%E5%B1%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>北アルプス</title>
+      <link>http://localhost:1313/categories/%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9/</link>
+      <pubDate>Wed, 12 Aug 2026 20:42:35 +0900</pubDate>
+      <guid>http://localhost:1313/categories/%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
