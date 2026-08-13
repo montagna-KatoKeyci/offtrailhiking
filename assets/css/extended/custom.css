@@ -58,30 +58,32 @@
 
 
 /* ==========================================
-   2. 記事タイトル（spanタグ直接指定で確実に縮小）
+   2. 記事タイトルのピンポイント文字縮小
    ========================================== */
-.entry-title span,
-.entry-title a span,
-.post-entry .entry-title {
-    font-size: 1.05rem !important; /* 既存の大きな20px相当から小ぶりに縮小 */
+/* PaperModの entry-header 内の見出し・リンク・テキストを直接指定 */
+.post-entry .entry-header h1,
+.post-entry .entry-header h2,
+.post-entry .entry-header h3,
+.post-entry .entry-header a,
+.post-entry .entry-header span {
+    font-size: 15px !important; /* 小ぶりにキュッと縮小 */
     font-weight: 600 !important;
+    line-height: 1.3 !important;
 }
 
-/* 記事タイトル全体の上下余白調整 */
-.entry-title {
-    font-size: 1.05rem !important;
-    margin-bottom: 4px !important;
+.post-entry .entry-header {
+    margin-bottom: 6px !important;
 }
 
-/* 記事本文（読みやすい大きさを維持） */
-.entry-content {
-    font-size: 0.92rem !important;
+/* 記事本文（概要テキスト） */
+.post-entry .entry-content {
+    font-size: 13px !important;
     line-height: 1.5 !important;
 }
 
 
 /* ==========================================
-   3. 記事カード（好評の目に優しいトーン）
+   3. 記事カード（目に優しいトーン）
    ========================================== */
 .post-entry,
 article.post-entry,
