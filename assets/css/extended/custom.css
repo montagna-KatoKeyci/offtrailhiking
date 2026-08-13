@@ -1,41 +1,43 @@
-/* 1. ヘッダー全体の余白 */
+/* 1. ヘッダー全体の設定（上部余白をさらに広くし、レイアウトを整える） */
 .nav {
-    margin-top: 20px;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 35px !important; /* 3. ブログタイトル上の余白を大きく調整 */
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
+/* ロゴエリア（タイトルと紹介短文） */
 .logo {
     display: flex !important;
     flex-direction: row !important;
     align-items: baseline !important;
-    justify-content: center;
-    margin-bottom: 12px;
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+    width: 100% !important;
 }
 
 /* ブログタイトル */
 .logo a {
-    font-size: 32px !important;
+    font-size: 30px !important;
     font-weight: bold;
     line-height: 1.2;
 }
 
-/* 紹介短文（タイトルの右横） */
+/* 2. 紹介短文（ワンサイズ大きく 13px -> 15px） */
 .logo::after {
-    content: "奥多摩オフトレイル・ハイキングときどきカンツォーネ";
+    content: "奥多摩のオフトレイル・ハイキングときどきカンツォーネ";
     display: inline-block;
-    font-size: 13px;
+    font-size: 15px !important;
     color: var(--secondary);
     font-weight: normal;
     margin-left: 15px;
 }
 
-/* 2. ナビゲーションメニューとダークモードボタンを1列に中央揃え */
+/* ナビゲーションとテーマ切替の親コンテナ */
 .menu {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100%;
+    width: 100% !important;
 }
 
 .menu ul {
@@ -46,26 +48,39 @@
     padding: 0 !important;
 }
 
-/* ダークモード切り替えボタンをメニューの右端（プロフィールの横）へ */
-#theme-toggle {
-    margin-left: 15px !important;
+/* 1. ダークモード切替ボタンをlogo内から分離して右端（プロフィールの右）に配置 */
+.logo #theme-toggle {
+    position: absolute !important;
+    right: 20px !important;
+    margin: 0 !important;
     padding: 0 !important;
     font-size: 18px !important;
 }
 
-/* コンテンツタイトルの文字サイズ */
-.entry-title {
-    font-size: 1rem !important;
+@media (min-width: 768px) {
+    .nav {
+        position: relative !important;
+    }
+    .logo #theme-toggle {
+        top: 50px !important; /* メニューの高さに合わせて配置 */
+        right: 10% !important;
+    }
 }
 
-/* 3. 記事カードの枠線（優先度を高めて確実に適用） */
+/* 4. 個別記事タイトル（2サイズ小さく 1.25rem -> 1.05rem） */
+.entry-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+}
+
+/* 5. 記事カードの幅・高さ（パディングを狭めてPaperMod公式デモ同等に調整） */
 .post-entry,
 article.post-entry,
 .first-entry {
     border: 1px solid #c0c0c0 !important;
     border-radius: 8px !important;
-    padding: 20px !important;
-    margin-bottom: 20px !important;
+    padding: 12px 16px !important; /* 上下のパディングを12pxに絞りコンパクト化 */
+    margin-bottom: 14px !important;
     background-color: var(--entry) !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
