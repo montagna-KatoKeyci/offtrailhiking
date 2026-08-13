@@ -45,3 +45,6 @@ theme = 'PaperMod'
   name = "プロフィール"
   url = "/profile/"
   weight = 70
+
+　[params]
+disableSpecial1stPost = true
