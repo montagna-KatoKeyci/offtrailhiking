@@ -58,19 +58,22 @@
 
 
 /* ==========================================
-   2. タイトル文字サイズと余白のバランス調整
+   2. タイトル文字サイズの調整
    ========================================== */
-/* ① トップページ（一覧カード内）のタイトル（中間サイズ） */
-.entry-header .entry-hint-parent {
-    font-size: 1.18rem !important; /* 中間の丁度良いサイズ */
+/* ① トップページ（一覧カード内）のタイトル（2サイズ拡大：1.18rem ➔ 1.38rem） */
+.entry-header .entry-hint-parent,
+article.first-entry .entry-header h2,
+article.post-entry .entry-header h2 {
+    font-size: 1.38rem !important;
     font-weight: bold !important;
     line-height: 1.3 !important;
     margin-bottom: 4px !important;
 }
 
-/* ② 個別記事（詳細ページ）の大見出しタイトル（中間サイズ） */
-.post-header .post-title {
-    font-size: 1.5rem !important; /* 中間の落ち着いた見出しサイズ */
+/* ② 個別記事（詳細ページ）の大見出しタイトル（2サイズ拡大：1.5rem ➔ 1.8rem） */
+.post-header .post-title,
+.post-title.entry-hint-parent {
+    font-size: 1.8rem !important;
     font-weight: bold !important;
     line-height: 1.3 !important;
 }
@@ -83,15 +86,32 @@
 
 
 /* ==========================================
-   3. 記事カード（余白を絞ってすっきりコンパクト化）
+   3. 記事カードの余白を強力に削減（パディング＋内部マージン除去）
    ========================================== */
+/* カード本体の上下パディングを極小化 */
 .post-entry,
 article.post-entry,
 .first-entry {
     border: 1px solid rgba(0, 0, 0, 0.12) !important;
     border-radius: 6px !important;
-    padding: 8px 12px !important; /* 上下左右の余白を詰めて引き締め */
+    padding: 6px 12px !important; /* 上下パディングを6pxまで縮小 */
     margin-bottom: 10px !important;
     background-color: rgba(128, 128, 128, 0.06) !important;
     box-shadow: none !important;
+}
+
+/* 内部パーツ（ヘッダー・本文・フッター）の余分な隙間を排除 */
+.post-entry .entry-header,
+article.first-entry .entry-header {
+    margin-bottom: 2px !important;
+}
+
+.post-entry .entry-content,
+article.first-entry .entry-content {
+    margin-bottom: 2px !important;
+}
+
+.post-entry .entry-footer,
+article.first-entry .entry-footer {
+    margin-top: 2px !important;
 }
