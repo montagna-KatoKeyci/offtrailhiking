@@ -1,11 +1,13 @@
-/* 1. ヘッダー全体の配置 */
+/* ==========================================
+   1. ヘッダー配置（シンプル・安全な標準構造）
+   ========================================== */
 .nav {
     margin-top: 25px !important;
     flex-direction: column !important;
     align-items: center !important;
 }
 
-/* ロゴエリア（横並びと並び順の整理） */
+/* ロゴエリア（タイトル・紹介短文・ダークモード切替） */
 .logo {
     display: flex !important;
     flex-direction: row !important;
@@ -17,17 +19,15 @@
     width: 100% !important;
 }
 
-/* ① 左：ブログタイトル */
+/* ブログタイトル */
 .logo a {
-    order: 1 !important;
     font-size: 28px !important;
     font-weight: bold;
     line-height: 1.2;
 }
 
-/* ② 中央：紹介短文 */
+/* 紹介短文 */
 .logo::after {
-    order: 2 !important;
     content: "奥多摩のオフトレイル・ハイキングときどきカンツォーネ";
     display: inline-block;
     font-size: 15px !important;
@@ -35,13 +35,8 @@
     font-weight: normal;
 }
 
-/* ③ 右端：ダークモード切替ボタン */
-.logo #theme-toggle,
+/* ダークモード切替ボタン */
 #theme-toggle {
-    order: 3 !important;
-    position: static !important;
-    margin-left: 8px !important;
-    padding: 0 !important;
     font-size: 18px !important;
 }
 
@@ -61,24 +56,33 @@
     padding: 0 !important;
 }
 
-/* 2. 個別記事タイトルだけを確実に小さく（指定を強化） */
-.post-entry .entry-header h2,
-.post-entry .entry-title,
-article.post-entry .entry-title,
-.entry-title {
-    font-size: 0.82rem !important; /* タイトルをキュッとコンパクト化 */
+
+/* ==========================================
+   2. 記事タイトル（spanタグ直接指定で確実に縮小）
+   ========================================== */
+.entry-title span,
+.entry-title a span,
+.post-entry .entry-title {
+    font-size: 1.05rem !important; /* 既存の大きな20px相当から小ぶりに縮小 */
     font-weight: 600 !important;
+}
+
+/* 記事タイトル全体の上下余白調整 */
+.entry-title {
+    font-size: 1.05rem !important;
     margin-bottom: 4px !important;
 }
 
-/* 記事本文（読みやすい大きさ維持） */
-.post-entry .entry-content,
-article.post-entry .entry-content {
+/* 記事本文（読みやすい大きさを維持） */
+.entry-content {
     font-size: 0.92rem !important;
     line-height: 1.5 !important;
 }
 
-/* 3. 記事カード（目に優しく、背景とほんのり馴染む絶妙なコントラスト色） */
+
+/* ==========================================
+   3. 記事カード（好評の目に優しいトーン）
+   ========================================== */
 .post-entry,
 article.post-entry,
 .first-entry {
@@ -86,6 +90,6 @@ article.post-entry,
     border-radius: 6px !important;
     padding: 10px 14px !important;
     margin-bottom: 12px !important;
-    background-color: rgba(128, 128, 128, 0.06) !important; /* 眩しくない柔らかなカード色 */
+    background-color: rgba(128, 128, 128, 0.06) !important;
     box-shadow: none !important;
 }
