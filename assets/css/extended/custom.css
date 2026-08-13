@@ -60,22 +60,22 @@
 /* ==========================================
    2. タイトル文字サイズの調整
    ========================================== */
-/* ① トップページ（一覧カード内）のタイトル */
+/* ① トップページ一覧カード内のタイトル（ワンサイズ大きく戻す：1.45rem） */
 .entry-header .entry-hint-parent,
 article.first-entry .entry-header h2,
 article.post-entry .entry-header h2 {
-    font-size: 1.25rem !important;
+    font-size: 1.45rem !important; /* 小さすぎた状態から1ステップ大きく設定 */
     font-weight: bold !important;
     line-height: 1.3 !important;
     margin-bottom: 6px !important;
 }
 
-/* ② 個別記事（詳細ページ）の大見出しタイトル（1段階大きく：2.4rem） */
+/* ② 個別記事ページを開いた時の最上部タイトル */
 .post-header .post-title,
 .post-title.entry-hint-parent {
-    font-size: 2.4rem !important;
+    font-size: 1.8rem !important;
     font-weight: bold !important;
-    line-height: 1.25 !important;
+    line-height: 1.3 !important;
     margin-bottom: 12px !important;
 }
 
@@ -86,7 +86,7 @@ article.post-entry .entry-header h2 {
     margin-bottom: 8px !important;
 }
 
-/* フッター（日付・メタ情報）の余白調整 */
+/* メタ情報 */
 .entry-footer {
     margin-top: 4px !important;
     font-size: 0.8rem !important;
@@ -94,14 +94,14 @@ article.post-entry .entry-header h2 {
 
 
 /* ==========================================
-   3. 記事カード（PaperModデモ相当のすっきりした比率）
+   3. 記事カード（枠線なし・すっきりデザイン）
    ========================================== */
 .post-entry,
 article.post-entry,
 .first-entry {
-    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border: none !important;
     border-radius: 8px !important;
-    padding: 16px 20px !important; /* デモの雰囲気を残しつつ上下だけをコンパクト化 */
+    padding: 16px 20px !important;
     margin-bottom: 16px !important;
     background-color: rgba(128, 128, 128, 0.06) !important;
     box-shadow: none !important;
