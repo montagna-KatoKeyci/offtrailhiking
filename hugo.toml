@@ -7,6 +7,11 @@ theme = 'PaperMod'
   name = 'モンターニャ'
 
 [[menu.main]]
+  name = "TOP"
+  url = "/"
+  weight = 5
+
+[[menu.main]]
   name = "山行記録"
   url = "/categories/sankouki/"
   weight = 10

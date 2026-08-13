@@ -1,6 +1,6 @@
-/* 1 & 2. ヘッダーの全体の配置（上部に余白を空け、タイトルと紹介文を横並びにする） */
+/* 1. ヘッダー全体の余白 */
 .nav {
-    margin-top: 15px;
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
 }
@@ -15,42 +15,57 @@
 
 /* ブログタイトル */
 .logo a {
-    font-size: 30px !important;
+    font-size: 32px !important;
     font-weight: bold;
     line-height: 1.2;
 }
 
-/* 紹介短文（タイトルの右横に少し間隔をあけて配置） */
+/* 紹介短文（タイトルの右横） */
 .logo::after {
-    content: "奥多摩のオフトレイル・ハイキングときどきカンツォーネ";
+    content: "奥多摩オフトレイル・ハイキングときどきカンツォーネ";
     display: inline-block;
     font-size: 13px;
     color: var(--secondary);
     font-weight: normal;
-    margin-left: 15px; /* タイトルとの間のスペース */
+    margin-left: 15px;
 }
 
-/* 3. ナビゲーションメニュー（山行記録・カンツォーネ...）を中央揃え */
+/* 2. ナビゲーションメニューとダークモードボタンを1列に中央揃え */
 .menu {
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
     width: 100%;
 }
 
 .menu ul {
+    display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* コンテンツ「ジャンダルム周回...」の文字サイズ */
+/* ダークモード切り替えボタンをメニューの右端（プロフィールの横）へ */
+#theme-toggle {
+    margin-left: 15px !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+}
+
+/* コンテンツタイトルの文字サイズ */
 .entry-title {
-    font-size: 1.15rem !important;
+    font-size: 1rem !important;
 }
 
-/* 4. 記事カードの枠線（優先度を高めて確実に適用） */
-article.post-entry {
-    border: 1px solid #ccc !important;
+/* 3. 記事カードの枠線（優先度を高めて確実に適用） */
+.post-entry,
+article.post-entry,
+.first-entry {
+    border: 1px solid #c0c0c0 !important;
     border-radius: 8px !important;
     padding: 20px !important;
     margin-bottom: 20px !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    background-color: var(--entry) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
 }
