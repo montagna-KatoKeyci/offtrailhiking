@@ -1,11 +1,11 @@
-/* 1. ヘッダー全体の設定 */
+/* 1. ヘッダー全体の配置 */
 .nav {
     margin-top: 25px !important;
     flex-direction: column !important;
     align-items: center !important;
 }
 
-/* ロゴエリア（タイトル ➔ 紹介短文 ➔ ダークモードボタン を1行に並べる） */
+/* ロゴエリア（タイトル ➔ 紹介短文 ➔ ダークモード切替の順に並べる） */
 .logo {
     display: flex !important;
     flex-direction: row !important;
@@ -17,15 +17,17 @@
     width: 100% !important;
 }
 
-/* ブログタイトル */
+/* ① 左：ブログタイトル */
 .logo a {
+    order: 1 !important;
     font-size: 28px !important;
     font-weight: bold;
     line-height: 1.2;
 }
 
-/* 紹介短文（タイトルの右横） */
+/* ② 中央：紹介短文 */
 .logo::after {
+    order: 2 !important;
     content: "奥多摩のオフトレイル・ハイキングときどきカンツォーネ";
     display: inline-block;
     font-size: 15px !important;
@@ -33,9 +35,10 @@
     font-weight: normal;
 }
 
-/* ダークモード切替ボタン（紹介短文のすぐ右横に配置） */
+/* ③ 右：ダークモード切替ボタン */
 .logo #theme-toggle,
 #theme-toggle {
+    order: 3 !important;
     position: static !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -58,25 +61,25 @@
     padding: 0 !important;
 }
 
-/* 2. 記事タイトルとカード内テキストの文字サイズ（さらに小さく調整） */
+/* 2. 個別記事タイトル（2サイズ小さく）と本文（1サイズ大きく） */
 .entry-title {
-    font-size: 0.95rem !important;
-    margin-bottom: 4px !important;
+    font-size: 0.9rem !important; /* タイトルをコンパクト化 */
+    margin-bottom: 6px !important;
 }
 
 .entry-content {
-    font-size: 0.85rem !important;
-    line-height: 1.4 !important;
+    font-size: 0.95rem !important; /* 本文を1サイズ拡大 */
+    line-height: 1.5 !important;
 }
 
-/* 3. 記事カードの上下幅をさらに狭く（パディング上下8px） */
+/* 3. 記事カード（背景色をページ全体と統一、枠線とパディングの維持） */
 .post-entry,
 article.post-entry,
 .first-entry {
     border: 1px solid #c0c0c0 !important;
     border-radius: 6px !important;
-    padding: 8px 14px !important;
-    margin-bottom: 10px !important;
-    background-color: var(--entry) !important;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    padding: 10px 14px !important;
+    margin-bottom: 12px !important;
+    background-color: transparent !important; /* カードの色合いを背景と一緒（透明）に */
+    box-shadow: none !important;
 }
